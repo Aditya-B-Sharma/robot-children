@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Golos Text' rel='stylesheet'>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'robotchildren/css/style.css' %}">
+    <title>ROBOT CHILDREN</title>
+  </head>
+  <body>
+    
+    <div class="grid-container">
+        <div id="grid-item1">
+            <p>This is a story about...</p>
+            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea mdc-text-field">
+                <span class="mdc-text-field__ripple"></span>
+                <span class="mdc-text-field__resizer">
+                  <textarea class="mdc-text-field__input" rows="15" cols="70" aria-label="storyabout"></textarea>
+                </span>
+                <span class="mdc-line-ripple"></span>
+            </label>
+        </div>
+        <div id="grid-item2">
+            <p>This is a piece of children's literature meant to...</p>
+            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea mdc-text-field">
+                <span class="mdc-text-field__ripple"></span>
+                <span class="mdc-text-field__resizer">
+                  <textarea class="mdc-text-field__input" rows="15" cols="70" aria-label="storyabout"></textarea>
+                </span>
+                <span class="mdc-line-ripple"></span>
+            </label>
+        </div>
+        <div id="grid-item3">
+            <p>The illustrations within this story...</p>
+            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea mdc-text-field">
+                <span class="mdc-text-field__ripple"></span>
+                <span class="mdc-text-field__resizer">
+                  <textarea class="mdc-text-field__input" rows="15" cols="70" aria-label="storyabout"></textarea>
+                </span>
+                <span class="mdc-line-ripple"></span>
+            </label>
+        </div>
+        <div id="grid-item4">
+            <p>This tale also...</p>
+            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea mdc-text-field">
+                <span class="mdc-text-field__ripple"></span>
+                <span class="mdc-text-field__resizer">
+                  <textarea class="mdc-text-field__input" rows="15" cols="70" aria-label="storyabout"></textarea>
+                </span>
+                <span class="mdc-line-ripple"></span>
+            </label>
+        </div>
+    </div>
+    <div class="mainbutton">
+        <button id="next" class="mdc-button mdc-button--raised">
+            <span class="mdc-button__label">Next</span>
+        </button>
+    </div>
+    
+    
+  </body>
+</html>
