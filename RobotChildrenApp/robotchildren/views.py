@@ -6,5 +6,9 @@ def create(request):
     template = loader.get_template('robotchildren/index.html')
     context = {"wtf":"Wtf"}
     return HttpResponse(template.render(context, request))
+def textloop(request):
+    template = loader.get_template('robotchildren/textloop.html')
+    context = {"wtf":"Wtf"}
+    return HttpResponse(template.render(context, request))
 
 # Create your views here.
