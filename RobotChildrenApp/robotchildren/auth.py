@@ -1,17 +1,23 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
+from dotenv import load_dotenv
 import pyrebase
+import os
 
+load_dotenv()
+print('--------')
 
-config={
-	apiKey: "",
-    authDomain: "robot-children.firebaseapp.com",
-    projectId: "robot-children",
-    storageBucket: "robot-children.appspot.com",
-    messagingSenderId: "",
-    appId: ""
+config = {
+  "apiKey" : os.getenv('API_KEY'),
+  "authDomain": os.getenv('AUTH_DOMAIN'),
+  "databaseURL": "",
+  "projectId": os.getenv('PROJECT_ID'),
+  "storageBucket": os.getenv('STORAGE_BUCKET'),
+  "messagingSenderId": os.getenv('MESSAGING_SENDER_ID'),
+  "appId": os.getenv('APP_ID'),
 }
+
 # Initialising database,auth and firebase for further use
 firebase=pyrebase.initialize_app(config)
 authe = firebase.auth()
@@ -53,6 +59,7 @@ def postsignUp(request):
 		uid = user['localId']
 		idtoken = request.session['uid']
 		print(uid)
+		print("uid successful")
 	except:
 		return render(request, "robotchildren/registration.html")
 	return render(request,"robotchildren/login.html")
