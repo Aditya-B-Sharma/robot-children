@@ -1,27 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Sign Up</title>
-	<style>
-	body{
-			background-image: url(https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
-		}
-		input{
-			margin-top:20px;
-			height: 30px;
-			width: 150px;
-			border-radius: 5px;
-			
-		}
-		input[type="submit"]{
-			background-color: rgba(7, 179, 185, 0.753);
-			color: rgb(255, 255, 255);
-			border: none;
-			border-radius: 5px;
-		}
-
-	</style>
+	<meta charset="UTF-8" />
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Golos Text' rel='stylesheet'>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'robotchildren/css/style.css' %}">
+    <title>ROBOT CHILDREN</title>
 </head>
 <body>
 
@@ -33,24 +19,50 @@
 
 <p>Please fill in this form</p>
 
+	<label for="Username" >User Name</label>
+	<label class="mdc-text-field mdc-text-field--outlined">
+		<span class="mdc-notched-outline">
+		<span class="mdc-notched-outline__leading"></span>
+		<span class="mdc-notched-outline__trailing"></span>
+		</span>
+		<input type="text" class="mdc-text-field__input" aria-label="Label" id="Username" name="name" placeholder="Your Name">
+	</label><br><br>
 
-	<label for="username">Username</label>
-	<input type="name" id="Username" name="name" placeholder="Your Name"><br><br>
-	<!-- Email: -->
 	<label for="Email" >Email</label>
-	<input type="email" id="Email" name="email" placeholder="Your Email Id"><br><br>
-	<!-- Password: -->
-	<label for="Password">Password/label>
-	<input type="password" id="Password" name="pass" placeholder="Password"><br><br>
-	<!-- RepeatPassword: -->
+	<label class="mdc-text-field mdc-text-field--outlined">
+		<span class="mdc-notched-outline">
+		<span class="mdc-notched-outline__leading"></span>
+		<span class="mdc-notched-outline__trailing"></span>
+		</span>
+		<input type="email" class="mdc-text-field__input" aria-label="Label" id="Email" name="email" placeholder="Your Email Id">
+	</label><br><br>
+
+	<label for="Password">Password</label>
+	<label class="mdc-text-field mdc-text-field--outlined">
+		<span class="mdc-notched-outline">
+		<span class="mdc-notched-outline__leading"></span>
+		<span class="mdc-notched-outline__trailing"></span>
+		</span>
+		<input type="password" class="mdc-text-field__input" aria-label="Label" id="Password" name="pass" placeholder="Your Password">
+	</label><br><br>
+
 	<label for="confirm_password">Confirm Password</label>
-	<input type="password" id="confirm_password" name="pass-repeat" placeholder=" Repeat Password"><br><br>
+	<label class="mdc-text-field mdc-text-field--outlined">
+		<span class="mdc-notched-outline">
+		<span class="mdc-notched-outline__leading"></span>
+		<span class="mdc-notched-outline__trailing"></span>
+		</span>
+		<input type="password" class="mdc-text-field__input" aria-label="Label" id="confirm_password" name="pass-repeat" placeholder="Repeat Password">
+	</label><br><br>
+
 	<label>
 	<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-	</label>
+	</label><br><br>
 	
-	<input type="submit" value="SignUp"><br><br>
-
+	<input class="mdc-button mdc-button--raised" type="submit" value="Sign Up">
+	<button class="mdc-button mdc-button--raised" type="button" onclick="location.href='{% url 'signin' %} '">Back to Sign In</button>
 </form>
+
+
 </body>
 </html>
