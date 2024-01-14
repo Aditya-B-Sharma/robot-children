@@ -5,7 +5,7 @@ from . import views, auth
 urlpatterns = [
     path('', views.create, name='create'),
     path('textloop', views.textloop, name='textloop'),
-    path('signIn/', auth.signIn),
+    path('signIn/', auth.signIn, name="signin"),
     path('postsignIn/', auth.postsignIn),
     path('signUp/', auth.signUp, name="signup"),
     path('logout/', auth.logout, name="log"),

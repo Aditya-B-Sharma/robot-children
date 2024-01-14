@@ -9,10 +9,7 @@
     <link rel="stylesheet" href="{% static 'robotchildren/css/style.css' %}">
     <title>ROBOT CHILDREN</title>
   </head>
-  <body>
-    {% block content %}
-    {% if request.session_id %}
-    {% for post in posts %}   
+  <body>  
     <div class="grid-container">
         <div id="grid-item1">
           <button class="mdc-button mdc-button--outlined" style="width: auto; height: 30vh; overflow:hidden">
@@ -44,11 +41,5 @@
             <span class="mdc-button__label">Back</span>
         </button>
     </div>
-    {% endfor %}
-    {% else %}
-    <h2>Not for you dawg</h2>
-    {% endif %}
-    {% endblock content %}
-    
   </body>
 </html>

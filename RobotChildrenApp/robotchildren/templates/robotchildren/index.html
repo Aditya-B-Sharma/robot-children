@@ -9,60 +9,70 @@
     <link rel="stylesheet" href="{% static 'robotchildren/css/style.css' %}">
     <title>ROBOT CHILDREN</title>
   </head>
+
   <body> 
     {% if request.session.uid %}
-    <div class="grid-container">
-        <div id="grid-item1">
-            <p>This is a story about...</p>
-            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea mdc-text-field">
-                <span class="mdc-text-field__ripple"></span>
-                <span class="mdc-text-field__resizer">
-                  <textarea class="mdc-text-field__input" rows="15" cols="70" aria-label="storyabout"></textarea>
-                </span>
-                <span class="mdc-line-ripple"></span>
-            </label>
+      <header>
+        <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"> 
+          <span class="mdc-top-app-bar__title">Robot Children</span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+          <button class="mdc-button mdc-button--raised" type="button" onclick="location.href='{% url 'log' %} '">Log Out</button>
+        </section>
         </div>
-        <div id="grid-item2">
-            <p>This is a piece of children's literature meant to...</p>
-            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea mdc-text-field">
-                <span class="mdc-text-field__ripple"></span>
-                <span class="mdc-text-field__resizer">
-                  <textarea class="mdc-text-field__input" rows="15" cols="70" aria-label="storyabout"></textarea>
-                </span>
-                <span class="mdc-line-ripple"></span>
-            </label>
+      </header>
+      <main>
+        <div class="grid-container">
+            <div id="grid-item1">
+                <p>This is a story about...</p>
+                <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea mdc-text-field">
+                    <span class="mdc-text-field__ripple"></span>
+                    <span class="mdc-text-field__resizer">
+                      <textarea class="mdc-text-field__input" rows="15" cols="70" aria-label="storyabout"></textarea>
+                    </span>
+                    <span class="mdc-line-ripple"></span>
+                </label>
+            </div>
+            <div id="grid-item2">
+                <p>This is a piece of children's literature meant to...</p>
+                <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea mdc-text-field">
+                    <span class="mdc-text-field__ripple"></span>
+                    <span class="mdc-text-field__resizer">
+                      <textarea class="mdc-text-field__input" rows="15" cols="70" aria-label="storyabout"></textarea>
+                    </span>
+                    <span class="mdc-line-ripple"></span>
+                </label>
+            </div>
+            <div id="grid-item3">
+                <p>The illustrations within this story...</p>
+                <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea mdc-text-field">
+                    <span class="mdc-text-field__ripple"></span>
+                    <span class="mdc-text-field__resizer">
+                      <textarea class="mdc-text-field__input" rows="15" cols="70" aria-label="storyabout"></textarea>
+                    </span>
+                    <span class="mdc-line-ripple"></span>
+                </label>
+            </div>
+            <div id="grid-item4">
+                <p>This tale also...</p>
+                <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea mdc-text-field">
+                    <span class="mdc-text-field__ripple"></span>
+                    <span class="mdc-text-field__resizer">
+                      <textarea class="mdc-text-field__input" rows="15" cols="70" aria-label="storyabout"></textarea>
+                    </span>
+                    <span class="mdc-line-ripple"></span>
+                </label>
+            </div>
         </div>
-        <div id="grid-item3">
-            <p>The illustrations within this story...</p>
-            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea mdc-text-field">
-                <span class="mdc-text-field__ripple"></span>
-                <span class="mdc-text-field__resizer">
-                  <textarea class="mdc-text-field__input" rows="15" cols="70" aria-label="storyabout"></textarea>
-                </span>
-                <span class="mdc-line-ripple"></span>
-            </label>
+        <div class="mainbutton">
+            <button id="next" class="mdc-button mdc-button--raised">
+                <span class="mdc-button__label">Next</span>
+            </button>
         </div>
-        <div id="grid-item4">
-            <p>This tale also...</p>
-            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea mdc-text-field">
-                <span class="mdc-text-field__ripple"></span>
-                <span class="mdc-text-field__resizer">
-                  <textarea class="mdc-text-field__input" rows="15" cols="70" aria-label="storyabout"></textarea>
-                </span>
-                <span class="mdc-line-ripple"></span>
-            </label>
-        </div>
-    </div>
-    <div class="mainbutton">
-        <button id="next" class="mdc-button mdc-button--raised">
-            <span class="mdc-button__label">Next</span>
-        </button>
-    </div>
-    <div>
-        <button type="button" onclick="location.href='{% url 'log' %} '">Log Out</button>
-    </div>
+      </main>
     {% else %}
-      <h2>Not for you dawg</h2>
+      <div><h2>To use the application, please sign in <a href="{% url 'signin' %}">here</a>.</h2></div>
     {% endif %}
   </body>
 </html>
